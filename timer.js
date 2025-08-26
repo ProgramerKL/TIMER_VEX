@@ -198,7 +198,7 @@ class CountdownTimer {
         } else {
             // After showing "1", wait 1s then play large beep, then start timer
             this.countdownTimeout = setTimeout(() => {
-                this.playBeep(1000, 3000);  // Large beep (1000ms at 3000Hz)
+                this.playBeep(1000, 1000);  // Large beep (1000ms at 1000Hz)
                 // Wait for the large beep to finish, then start timer
                 setTimeout(() => {
                     this.display.classList.remove('countdown', 'count-1');
