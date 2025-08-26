@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>60-Second Countdown Timer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="timer-container">
+        <div class="timer-wrapper" role="timer" aria-label="Countdown timer" aria-live="polite" aria-atomic="true">
+            <svg class="progress-ring" viewBox="0 0 200 200" preserveAspectRatio="xMidYMid meet">
+                <circle
+                    class="progress-ring__background"
+                    cx="100"
+                    cy="100"
+                    r="90"
+                    stroke-width="8"
+                    fill="none"
+                />
+                <circle
+                    class="progress-ring__circle"
+                    cx="100"
+                    cy="100"
+                    r="90"
+                    stroke-width="8"
+                    fill="none"
+                />
+            </svg>
+            <div class="timer-display" id="timerDisplay">01:00</div>
+        </div>
+        
+        <div class="controls">
+            <button class="btn btn-primary" id="startPauseBtn" aria-label="Start or pause timer">
+                <span id="btnText">Start</span>
+            </button>
+            <button class="btn btn-secondary" id="resetBtn" aria-label="Reset timer">
+                Reset
+            </button>
+        </div>
+        
+        <div class="sr-only" id="screenReaderAnnouncements" aria-live="assertive" aria-atomic="true"></div>
+    </div>
+
+    <!-- Settings Panel -->
+    <div class="settings-panel" id="settingsPanel">
+        <button class="settings-toggle" id="settingsToggle" aria-label="Settings">⚙️</button>
+        <div class="settings-content" id="settingsContent">
+            <h3>Backgrounds</h3>
+            <div class="background-options">
+                <button class="bg-option active" data-bg="gradient" aria-label="Purple gradient background">
+                    <div class="bg-preview bg-gradient"></div>
+                    <span>Gradient</span>
+                </button>
+                <button class="bg-option" data-bg="dark" aria-label="Dark background">
+                    <div class="bg-preview bg-dark"></div>
+                    <span>Dark</span>
+                </button>
+                <button class="bg-option" data-bg="blue" aria-label="Blue background">
+                    <div class="bg-preview bg-blue"></div>
+                    <span>Blue</span>
+                </button>
+                <button class="bg-option" data-bg="green" aria-label="Green background">
+                    <div class="bg-preview bg-green"></div>
+                    <span>Green</span>
+                </button>
+                <button class="bg-option" data-bg="red" aria-label="Red background">
+                    <div class="bg-preview bg-red"></div>
+                    <span>Red</span>
+                </button>
+                <button class="bg-option" data-bg="space" aria-label="Space background">
+                    <div class="bg-preview bg-space"></div>
+                    <span>Space</span>
+                </button>
+                <button class="bg-option" data-bg="orange" aria-label="Orange background">
+                    <div class="bg-preview bg-orange"></div>
+                    <span>Orange</span>
+                </button>
+                <button class="bg-option" data-bg="pink" aria-label="Pink background">
+                    <div class="bg-preview bg-pink"></div>
+                    <span>Pink</span>
+                </button>
+                <button class="bg-option" data-bg="teal" aria-label="Teal background">
+                    <div class="bg-preview bg-teal"></div>
+                    <span>Teal</span>
+                </button>
+                <button class="bg-option" data-bg="gold" aria-label="Gold background">
+                    <div class="bg-preview bg-gold"></div>
+                    <span>Gold</span>
+                </button>
+                <button class="bg-option" data-bg="sunset" aria-label="Sunset background">
+                    <div class="bg-preview bg-sunset"></div>
+                    <span>Sunset</span>
+                </button>
+                <button class="bg-option" data-bg="ocean" aria-label="Ocean background">
+                    <div class="bg-preview bg-ocean"></div>
+                    <span>Ocean</span>
+                </button>
+                <button class="bg-option" data-bg="forest" aria-label="Forest background">
+                    <div class="bg-preview bg-forest"></div>
+                    <span>Forest</span>
+                </button>
+                <button class="bg-option" data-bg="lavender" aria-label="Lavender background">
+                    <div class="bg-preview bg-lavender"></div>
+                    <span>Lavender</span>
+                </button>
+                <button class="bg-option" data-bg="mint" aria-label="Mint background">
+                    <div class="bg-preview bg-mint"></div>
+                    <span>Mint</span>
+                </button>
+                <button class="bg-option" data-bg="coral" aria-label="Coral background">
+                    <div class="bg-preview bg-coral"></div>
+                    <span>Coral</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="timer.js"></script>
+</body>
+</html>
